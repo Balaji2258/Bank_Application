@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Your Bank - Login</title>
+<link rel="stylesheet" href="css/welcomeStyle.css">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+	.navbar {
+		margin-left: 15%;
+	}
+	
+	body {
+		height: 65%;
+	}
+	
+	.content .container .login_img img {
+		float: left;
+		margin-left: 23%;
+		margin-top: 2%;
+		width: 13%;
+		height: 13%;
+	}
+	
+	.container table {
+		margin-right: 23%;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<div class="logo1">
+			<img src="images/logo.jpg" class="logo" alt="Your Bank">
+		</div>
+
+		<div class="whatsapp">
+			<a href="https://api.whatsapp.com/send?phone=9590867522"><img src="whatsapp.jpg" class="whatsapp" alt="Send Message"></a>
+		</div>
+		
+		<div class = "head_content">
+			<p class="bank_name">YOUR BANK</p>
+			<p class="tagline" style="font-family: 'Kaushan Script', cursive;">A partner for life..</p>
+		</div>
+		
+		<div class="navg">
+			<nav class="navbar">
+				<ul>
+					<li><a href="Home">Home</a></li><li class="line">&nbsp;</li>
+					<li><a href="Profile.jsp">Profile</a></li><li class="line">&nbsp;</li>
+					<li><a href="Withdraw.jsp">Withdraw</a></li><li class="line">&nbsp;</li>
+					<li><a href="Deposit.jsp">Deposit</a></li><li class="line">&nbsp;</li>
+					<li><a href="Transfer.jsp">Transfer</a></li><li class="line">&nbsp;</li>
+					<li><a href="RegisterUser.html">Register</a></li><li class="line">&nbsp;</li>
+					<li><a href="LoginUser.html" class="active">User Login</a></li><li class="line">&nbsp;</li>
+					<li><a href="LoginAdmin.html">Admin Login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="content">
+		<br>
+		<div class="container">
+			<div class="login_img">
+				<img src="images/login.jpeg" alt="Login">
+			</div>
+			<form action="Login" method="post">
+				<table class = "login">
+					<tr>
+						<th colspan="2" align="center" class="tabhead">LOGIN</th>
+					</tr>
+
+					<tr>
+						<td>User Name&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><span class="error">*</span><input type="text" name="uname" required="required"></td>
+					</tr>
+					
+					<tr>
+						<td>Password&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><span class="error">*</span><input type="password" name="pwd" required="required"></td>
+					</tr>
+					
+					<!-- input type="submit" class="submit" value = "Login"-->
+					<tr>
+						<td colspan="2" align="center"><input type="submit" class="btn" value="LOGIN"></td>
+					</tr>					
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Your Bank - Withdraw</title>
+<link rel="stylesheet" href="css/welcomeStyle.css">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+</style>
+</head>
+<body>
+	<header>
+		<div class="logo1">
+			<img src="images/logo.jpg" class="logo" alt="Your Bank">
+		</div>
+
+		<div class="whatsapp">
+			<a href="https://api.whatsapp.com/send?phone=9590867522"><img src="whatsapp.jpg" class="whatsapp" alt="Send Message"></a>
+		</div>
+		
+		<div class = "head_content">
+			<p class="bank_name">YOUR BANK</p>
+			<p class="tagline" style="font-family: 'Kaushan Script', cursive;">A partner for life..</p>
+		</div>
+
+		<div class="navg">
+			<nav class="navbar">
+				<ul>
+					<li><a href="Home.jsp">Home</a></li><li class="line">&nbsp;</li>
+					<li><a href="Profile.jsp">Profile</a></li><li class="line">&nbsp;</li>
+					<li><a href="Transaction" class="active">Transactions</a></li><li class="line">&nbsp;</li>
+					<li><a href="Logout">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="content">
+		&nbsp;&nbsp;&nbsp;
+		<br><br><br><br><br>
+		
+		<div class="container">
+			<form action="Withdraw" method="post">
+				<table class = "withdraw">
+					<tr>
+						<th colspan="2" align="center" class="tabhead">WITHDRAW</th>
+					</tr>
+
+					<tr>
+						<td>Enter withdraw amount&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><span class="error">*</span><input type="number" name="amount" required="required"></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2" align="center"><input type="submit" class="btn" value="WITHDRAW"></td>
+					</tr>					
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+	<script type="text/javascript">
+		function test() {
+			
+			var name = document.registerForm.user.value;
+			
+			alert("TEST OK "+name);
+			return false;
+		}
+	</script>
+
+<body>
+
+		<form action="Register" method="post" name="registerForm" onsubmit="return test()" >
+		
+			<input type="text" name = "user"><br><br>
+			
+				<input type = "submit" value="test">
+		
+		</form>
+
+</body>
+</html>

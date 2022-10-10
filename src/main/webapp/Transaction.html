@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Your Bank - Transaction</title>
+<link rel="stylesheet" href="style.css">
+<style type="text/css">	
+	.navigate {
+		float: left;
+	}
+		
+	.navigate ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  width: 200px;
+	  
+	}
+	
+	.naviagate li {
+		float: left;
+		background-color: beige;
+	}
+	
+	.navigate li a {
+	  display: block;
+	  width: 60px;
+	  padding: 20px 70px;
+	  text-align: center;
+	  
+	  text-decoration: none;
+	}
+	
+	/* Change the link color on hover */
+	.navigate li a:hover {
+	  	background-color: rgb(32, 74, 135);
+  		color: beige;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<center><img src="logo.jpg" class="logo" alt="Your Bank"></center>
+		
+		<!-- p align="right">
+			<a href = "Logout">Logout</a>
+		</p-->
+	</header>
+	<h1 align="center">YOUR BANK</h1>
+	<!-- h2 align="center">HOME</h2-->
+	
+	<div class="navg">
+	<nav class="navigation">
+	<ul>
+		<li><a href="Home.jsp">Home</a></li>
+		<li class="line">|</li>
+		<li><a href="Profile.jsp">Profile</a></li>
+		<li class="line">|</li>
+		<li><a href="Transaction" class="active">Transactions</a></li>
+		<li class="line">|</li>
+		<li><a href="Contact.html">Contact Us</a></li>
+		<li class="line">|</li>
+		<li><a href="Logout">Logout</a></li>
+	</ul>
+	</nav>
+	</div>
+	
+	<br><br><br><br>
+	
+	<div class="navigate">
+		<ul>
+		  <li><a href="WithdrawAmt.html">Withdraw</a></li>
+		  <li><a href="DepositAmt.html">Deposit</a></li>
+		  <li><a href="TransferAmt.html">Transfer</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

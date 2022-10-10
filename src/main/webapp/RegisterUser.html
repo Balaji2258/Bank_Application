@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Your Bank - Register User</title>
+<link rel="stylesheet" href="css/welcomeStyle.css">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+	.navbar {
+		margin-left: 15%;
+	}
+	
+	.content {
+		height: 70%;
+	}
+	
+	.container table {
+	    margin-right: auto;
+	    background: rgb(63, 62, 62);
+	    color: #F6C7A1;
+	    margin-top: 12%;
+	    margin-left: auto;
+	    width: 35%;
+	    position: relative;
+	    border-radius: 2px;
+	}
+	
+	.container table .tabhead {
+	    background-color: black;
+	    color: #F6C7A1;
+	    padding: 10px;
+	    font-size: 25px;
+	}
+	
+	.container table tr td {
+	    padding: 10px 10px 10px 45px;;
+	    margin: 0;
+	    border: 0;
+	    text-align: center;
+	}
+	
+	.container table tr .nc {
+		text-align: left;
+		width: 220px;
+	}
+	
+	td input {
+	    padding: 10px;
+	    width: 60%;
+	}
+	
+	td select {
+	    padding: 10px;
+	    width: 68%;
+	}
+	
+	.container table tr .btn {
+	    padding: 5px;
+	    background-color: #333;
+	    color: #F6C7A1;
+	    width: 30%;
+	    font-weight: bolder;
+	}
+	
+	.container table tr .btn:hover {
+	    background-color: grey;
+	    color: whitesmoke;
+	}
+	
+	.content .container .login_img img {
+		float: left;
+		margin-left: 23%;
+		margin-top: 12%;
+		width: 14%;
+		height: 14%;
+	}
+	
+	.container table {
+		margin-right: 23%;
+	}
+	
+</style>
+
+<script type="text/javascript">
+	/*function validateBal(balance) {
+		
+	}*/
+
+	function validateDetails() {
+		var user = document.registerForm.uname.value;
+		var pass = document.registerForm.pwd.value;
+		var repwd = document.registerForm.rePwd.value;
+		var accType = document.registerForm.accType.value;
+		var bal = document.registerForm.balance.value;
+		var phone = document.registerForm.phone.value;
+		var phoneno = /^\d{10}$/;
+		var email = document.registerForm.email.value;
+		
+		if(user == null || user == "") {
+			alert("UserName cannot be null");
+			return false;
+		}
+		if(pass == null || pass == "") {
+			alert("'Password' cannot be empty");
+			return false;
+		}
+		if(repwd == null || repwd == "") {
+			alert("'Re-enter Password' cannot be empty");
+			return false;
+		}
+		if(!pass.equals(repwd)) {
+			alert("Passwords do not match");
+			return false;
+		}
+		if(accType == null || accType == "#") {
+			alert("'Account Type' cannot be empty");
+			return false;
+		}
+		if(bal == 0 || bal == "") {
+			alert("'Initial Deposit Amount' cannot be empty");
+			return false;
+		}
+		if(accType.equalsIgnoreCase("savings") && !(bal>1000)) {
+			alert("Minimum deposit for savings account is 1000");
+			return false;
+		}
+		if(accType.equalsIgnoreCase("current") && !(bal>2500)) {
+			alert("Minimum deposit for current account is 2500");
+			return false;
+		}
+		if(!(phone.value.match(phoneno))) {
+			alert("'Phone No.' is less than 10 digits");
+			return false;
+		}
+		if(email == null || email == "") {
+			alert("'Email' cannot be empty");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<header>
+		<div class="logo1">
+			<img src="images/logo.jpg" class="logo" alt="Your Bank">
+		</div>
+
+		<div class="whatsapp">
+			<a href="https://api.whatsapp.com/send?phone=9590867522"><img src="whatsapp.jpg" class="whatsapp" alt="Send Message"></a>
+		</div>
+		
+		<div class = "head_content">
+			<p class="bank_name">YOUR BANK</p>
+			<p class="tagline" style="font-family: 'Kaushan Script', cursive;">A partner for life..</p>
+		</div>
+
+		<div class="navg">
+			<nav class="navbar">
+				<ul>
+					<li><a href="Home.jsp">Home</a></li><li class="line">&nbsp;</li>
+					<li><a href="Profile.jsp">Profile</a></li><li class="line">&nbsp;</li>
+					<li><a href="Withdraw.jsp">Withdraw</a></li><li class="line">&nbsp;</li>
+					<li><a href="Deposit.jsp">Deposit</a></li><li class="line">&nbsp;</li>
+					<li><a href="Transfer.jsp">Transfer</a></li><li class="line">&nbsp;</li>
+					<li><a href="RegisterUser.html"  class="active">Register</a></li><li class="line">&nbsp;</li>
+					<li><a href="LoginUser.html">User Login</a></li><li class="line">&nbsp;</li>
+					<li><a href="LoginUser.html">Admin Login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<br>
+	
+	<div class="content">
+		
+		<div class="container">
+			<div class="login_img">
+				<img src="images/login.jpeg" alt="Login">
+			</div>
+			<form action="Register" method="post" name="registerForm">
+			<table class = "reg">
+				<tr>
+					<th colspan=2 align="center" class="tabhead">REGISTER</th>
+				</tr>
+				
+				<tr>
+					<td class="nc">Enter Full Name<span class="error">*</span>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" id="flname" name="flname" ></td>
+				</tr>
+				
+				<tr>
+					<td class="nc">Enter User Name<span class="error">*</span>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" id="uname" name="uname" ></td>
+				</tr>
+		
+				<tr>
+					<td class="nc">Enter Password<span class="error">*</span>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="password" id="pwd" name="pwd"></td>
+				</tr>
+				
+				<tr>
+					<td class="nc">Re-enter Password<span class="error">*</span>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="password" id="rePwd" name="rePwd"></td>
+				</tr>
+				
+				<tr>
+					<td class="nc">Select Account Type&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><select name="accType" id="accType">
+						<option value="">select account type</option>
+						<option value="savings">Savings</option>
+						<option value="current">Current</option>
+					</select></td>
+				</tr>
+		
+				<tr>
+					<td class="nc">Enter initial deposit amount&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="number" id="balance" name="balance"></td>
+				</tr>
+				
+				<tr>
+					<td class="nc">Address&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><textarea name="address" id="address" rows="3" cols="23.5"></textarea></td>
+				</tr>
+				
+				<tr>
+					<td class="nc">Enter Phone No.<span class="error">*</span>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" id="phone" name="phone"></td>
+				</tr>
+				
+				<tr>
+					<td class="nc">Enter Email ID&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" id="email" name="email"></td>
+				</tr>
+				
+				<tr><td colspan="2" align="center"><br><input type="submit" class="btn" value="REGISTER"/></td></tr>
+			</table>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
